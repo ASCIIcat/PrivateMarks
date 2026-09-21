@@ -1,0 +1,3 @@
+Generated using the built-in image_gen tool.
+
+Use case: logo-brand. Asset type: square PNG installer icon for the Private Marks game plugin. Create one polished, minimal icon: a bold warm pink heart nested inside a pale blush location-pin silhouette, centered on a solid very dark plum background. The pin and heart must read clearly as two distinct simple shapes, with generous dark negative space, a softly rounded pin tip, balanced symmetry, crisp smooth edges and restrained subtle shading. Friendly, elegant, cozy aesthetic. Strong legibility at tiny 32-64 pixel display sizes. The emblem fills about 75 percent of the square. No text, letters, border, extra symbols, sparkles, mockup, watermark or busy texture. Square 1024x1024 image.
