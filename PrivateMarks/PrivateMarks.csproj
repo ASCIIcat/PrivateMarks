@@ -1,12 +1,12 @@
 <Project Sdk="Dalamud.NET.Sdk/15.0.0">
   <PropertyGroup>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Author>AdelaideTheBun ♥</Author>
     <Name>Private Marks</Name>
     <Punchline>Keep your people in sight. Only on your screen.</Punchline>
     <Description>Manually assign private visual marks to players, with loaded-player edge indicators and optional remembered favourites.</Description>
     <RepoUrl>https://github.com/ASCIIcat/PrivateMarks</RepoUrl>
-    <IconUrl>https://raw.githubusercontent.com/ASCIIcat/DalamudPlugins/main/icons/PrivateMarks.png</IconUrl>
+    <IconUrl>https://raw.githubusercontent.com/ASCIIcat/DalamudPlugins/main/icons/PrivateMarks-512.png</IconUrl>
     <Tags>utility;party;overlay</Tags>
     <ImplicitUsings>enable</ImplicitUsings>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>

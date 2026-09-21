@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 — 2026-09-21
+
+- Resize the installer icon to Dalamud's supported 512×512 size and refresh its URL.
+
 ## 1.0.0 — 2026-09-21
 
 - Private heart, star, diamond and circle marks for up to eight players.
