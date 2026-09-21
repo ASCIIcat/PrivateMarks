@@ -5,6 +5,8 @@
     <Name>Private Marks</Name>
     <Punchline>Keep your people in sight. Only on your screen.</Punchline>
     <Description>Manually assign private visual marks to players, with loaded-player edge indicators and optional remembered favourites.</Description>
+    <RepoUrl>https://github.com/ASCIIcat/PrivateMarks</RepoUrl>
+    <IconUrl>https://raw.githubusercontent.com/ASCIIcat/DalamudPlugins/main/icons/PrivateMarks.png</IconUrl>
     <Tags>utility;party;overlay</Tags>
     <ImplicitUsings>enable</ImplicitUsings>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
