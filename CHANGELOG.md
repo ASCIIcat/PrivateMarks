@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 — 2026-09-21
+
+- Add /privatemarks to open settings directly; existing /pmark commands remain available.
+- Only unregister commands successfully registered by this plugin instance.
+
 ## 1.0.1 — 2026-09-21
 
 - Resize the installer icon to Dalamud's supported 512×512 size and refresh its URL.

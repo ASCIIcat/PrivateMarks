@@ -21,6 +21,8 @@ public sealed class Plugin : IDalamudPlugin
     private uint territory;
     private DateTime lastError;
     private int pendingReset;
+    private readonly bool ownsPmarkCommand;
+    private readonly bool ownsPrivateMarksCommand;
 
     public Plugin(IDalamudPluginInterface pluginInterface)
     {
@@ -31,8 +33,10 @@ public sealed class Plugin : IDalamudPlugin
         hotbar = new(config, marks, players, Save);
         renderer = new(config, marks, players);
         windows.AddWindow(hotbar);
-        Services.Commands.AddHandler("/pmark", new CommandInfo(Command)
+        ownsPmarkCommand = Services.Commands.AddHandler("/pmark", new CommandInfo(Command)
         { HelpMessage = "Toggle Private Marks. /pmark clearall clears all marks; /pmark settings opens settings." });
+        ownsPrivateMarksCommand = Services.Commands.AddHandler("/privatemarks", new CommandInfo(Command)
+        { HelpMessage = "Open Private Marks settings. /privatemarks clearall clears all marks." });
         pluginInterface.UiBuilder.Draw += Draw;
         pluginInterface.UiBuilder.OpenMainUi += Open;
         pluginInterface.UiBuilder.OpenConfigUi += OpenSettings;
@@ -56,6 +60,7 @@ public sealed class Plugin : IDalamudPlugin
         switch (args.Trim().ToLowerInvariant())
         {
             case "clearall": marks.ClearAll(); Save(); break;
+            case "" when command.Equals("/privatemarks", StringComparison.OrdinalIgnoreCase):
             case "settings": OpenSettings(); break;
             default: hotbar.Toggle(); break;
         }
@@ -87,7 +92,8 @@ public sealed class Plugin : IDalamudPlugin
         Services.PluginInterface.UiBuilder.Draw -= Draw;
         Services.PluginInterface.UiBuilder.OpenMainUi -= Open;
         Services.PluginInterface.UiBuilder.OpenConfigUi -= OpenSettings;
-        Services.Commands.RemoveHandler("/pmark");
+        if (ownsPmarkCommand) Services.Commands.RemoveHandler("/pmark");
+        if (ownsPrivateMarksCommand) Services.Commands.RemoveHandler("/privatemarks");
         Services.Client.Logout -= OnLogout;
         Services.Client.TerritoryChanged -= OnTerritoryChanged;
         windows.RemoveAllWindows(); players.Clear();

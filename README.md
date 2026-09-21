@@ -11,7 +11,7 @@ be marked simultaneously; icons can be reused freely.
 3. Close the window. The overlay remains visible.
 
 Click an active icon again or the row's **X** to clear it. **Clear All** and
-`/pmark clearall` remove both temporary and saved assignments. `/pmark settings`
+`/pmark clearall` remove both temporary and saved assignments. `/privatemarks` (or `/pmark settings`)
 opens the lightweight settings panel. Search accepts names and world names.
 
 **Background opacity** adjusts the dark backing on world markers and edge
@@ -68,3 +68,7 @@ publish anything automatically.
   write, combat recommendation or action automation in this plugin.
 
 See [API research](docs/API-RESEARCH.md) and [in-game acceptance tests](docs/TESTING.md).
+
+## Switching from a development copy
+
+Disable the development copy before enabling the installed release. If both were loaded together, disable and re-enable the installed copy to restore its chat commands.
